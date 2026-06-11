@@ -1,0 +1,96 @@
+*{
+padding:0;
+margin: 0;
+box-sizing: border-box;
+}
+
+
+/*variables generales (color, tamaños, alturas)*/
+
+:root{
+    --color-primario: #857b2f;
+    --color-secundario: #C1E58E;
+    --altura-header:240px;
+    --texto-color-primario:#fff;
+    --texto-color-secundario:#222;
+    --fuente-titulos: 'Lucida Sans', 'Lucida Sans general', 'Lucida Grande', 'Lucida Sans Unicode' sans-serif;
+}
+
+.blanco{
+    background-color: var(--texto-color-primario)!important;
+}
+
+
+header{
+    height: var(--altura-header);
+    background-color: var(--color-primario);
+    color: var(--texto-color-primario);
+    position: relative;
+}
+    .degradado{
+
+        background: linear-gradient(135deg, var(--color-primario), var(--color-secundario));
+    }
+    .bienvenida{
+        left: 10%;
+        bottom: 35px;
+        position: absolute;
+       
+        padding: 1.5em 0;
+        /*em equivale a 16 px*/
+        font-family: var(--fuente-titulos);
+        color: var(--texto-color-primario);
+    }
+    
+    .buscador input[type="text"] {
+        position: absolute;
+        bottom:-25px;/*la mitad de height*/
+        left: 10%;
+
+        display: flex;
+        justify-content: space-between;
+
+        height: 50px;
+        width: 80%;
+       /* margin:auto;*/
+        background-color: white;
+        box-shadow: 0 6px 16px- -3px(0,0,0,0.5);
+
+    }
+
+    
+    .cuadrado-boton{
+        height:50px;
+        width: 50px;
+        background-color: green;
+    }
+
+    .centrar{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .btn-buscar{
+        background-color: transparent;
+        border:none;
+        outline: none;
+        height: 50px;
+        width: 50px;
+    }
+
+    .btn-buscar:hover{
+        background-color: var(---color-secundario);
+        cursor: pointer;
+    }
+
+main{
+    min-height: calc(100dvh - var(--altura-header));
+    background-color: var(--color-secundario);
+
+}
+.categorias{
+    height:100px;
+    padding-top: 25px;
+    background-color: var(--texto-color-primario);
+}
