@@ -94,13 +94,13 @@ header{
     }
 
 main{
+     padding-top: 3em;
     min-height: calc(100dvh - var(--altura-header));
-    background-color: var(--color-secundario);
+    color: var(--texto-color-secundario);
 
 }
 .categorias{
     height:100px;
-    padding-top: 35px;
     background-color: var(--texto-color-primario);
     justify-content: center;
 
