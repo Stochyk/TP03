@@ -100,6 +100,7 @@ main{
     height:100px;
     padding-top: 35px;
     background-color: var(--texto-color-primario);
+    justify-content: center;
     
     display: flex;
     gap: 2em;
