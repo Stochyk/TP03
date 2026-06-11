@@ -42,7 +42,8 @@ header{
         color: var(--texto-color-primario);
     }
     
-    .buscador input[type="text"] {
+    
+    .buscador  {
         position: absolute;
         bottom:-25px;/*la mitad de height*/
         left: 10%;
@@ -56,6 +57,12 @@ header{
         background-color: white;
         box-shadow: 0 6px 16px- -3px(0,0,0,0.5);
 
+    }
+    .buscador input[type="text"]{
+        width: 100%;
+        border:none;
+        outline: none;
+        padding-left: 1em;
     }
 
     
@@ -91,6 +98,7 @@ main{
 }
 .categorias{
     height:100px;
-    padding-top: 25px;
+    padding-top: 35px;
     background-color: var(--texto-color-primario);
+    display: flex;
 }
