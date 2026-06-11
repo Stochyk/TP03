@@ -100,5 +100,17 @@ main{
     height:100px;
     padding-top: 35px;
     background-color: var(--texto-color-primario);
+    
     display: flex;
+    gap: 2em;
+    align-items: center;
+
+}
+
+.item-categoria{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5em;
+    font-size: 1.5em;
 }
