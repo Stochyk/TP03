@@ -108,6 +108,7 @@ main{
 }
 
 .item-categoria{
+    min-width: 80px;
     display: flex;
     flex-direction: column;
     align-items: center;
