@@ -29,6 +29,8 @@ header{
     position: relative;
 }
     .degradado{
+        height: 100%;
+        width:100%;
 
         background: linear-gradient(135deg, var(--color-primario), var(--color-secundario));
     }
