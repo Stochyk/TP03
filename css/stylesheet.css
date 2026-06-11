@@ -10,6 +10,7 @@ text-decoration: none;
 
 :root{
     --color-primario: #857b2f;
+    --color-clarito-primario: #c9c17a;
     --color-secundario: #C1E58E;
     --altura-header:240px;
     --texto-color-primario:#fff;
@@ -124,7 +125,7 @@ main{
     transition: all 0.3s ease-in;
 }
 .item-categoria:hover{
-    background-color: var(--color-primario);
+    background-color: var(--color-clarito-primario);
     color: white;
     transform: scale(1.1);
     cursor: pointer;
