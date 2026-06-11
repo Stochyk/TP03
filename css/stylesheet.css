@@ -101,10 +101,11 @@ main{
     padding-top: 35px;
     background-color: var(--texto-color-primario);
     justify-content: center;
-    
+
     display: flex;
     gap: 2em;
     align-items: center;
+    overflow-x: auto;
 
 }
 
