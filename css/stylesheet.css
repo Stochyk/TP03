@@ -103,6 +103,7 @@ main{
 
 }
 .categorias{
+    padding: 1em;
     height:100px;
     background-color: var(--texto-color-primario);
     justify-content: center;
@@ -130,4 +131,5 @@ main{
     transform: scale(1.1);
     cursor: pointer;
     border-radius: 3em;
+
 }
