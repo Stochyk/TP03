@@ -128,7 +128,7 @@ main{
 .item-categoria:hover{
     background-color: var(--color-clarito-primario);
     color: white;
-    transform: scale(1.1);
+    transform: scale(1.1) translateY(-.3em);
     cursor: pointer;
     border-radius: 3em;
 
