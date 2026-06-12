@@ -44,6 +44,7 @@ header{
         /*em equivale a 16 px*/
         font-family: var(--fuente-titulos);
         color: var(--texto-color-primario);
+        
     }
     
     
@@ -59,7 +60,7 @@ header{
         width: 80%;
        /* margin:auto;*/
         background-color: white;
-        box-shadow: 0 6px 16px- -3px(0,0,0,0.5);
+        box-shadow: 0 6px 16px -3px rgba(0,0,0,0.5);
 
     }
     .buscador input[type="text"]{
@@ -124,7 +125,7 @@ main{
     align-items: center;
     gap: 0.5em;
     font-size: 1.5em;
-    color:rgb(158, 157, 157);
+    color: var(--color-primario);
     transition: all 0.3s ease-in;
     display: grid;
     place-items: center;
@@ -133,8 +134,9 @@ main{
 .item-categoria .fa{font-size:2em}
 
 .item-categoria:hover{
-    background-color: var(--color-clarito-primario);
-    color: white;
+    background-color: #fff;
+    color: var(--color-clarito-primario);
+    box-shadow: 0 6px 26px -3px rgba(0,0,0,0.5);
     transform: scale(1.05) translateY(-.3em);
     cursor: pointer;
     border-radius: 3em;
