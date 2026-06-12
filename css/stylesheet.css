@@ -103,7 +103,7 @@ main{
 
 }
 .categorias{
-    padding: 1em 0;
+    padding: 2em 0;
     background-color: var(--texto-color-primario);
     justify-content: center;
 
@@ -115,9 +115,8 @@ main{
 }
 
 .item-categoria{
-    flex-grow: 0;
-    flex-shrink: 0;
-    flex-basis: 150px;
+    flex:0 0 120px;
+    height: 120px;
     padding: .5em;
     min-width: 80px;
     display: flex;
