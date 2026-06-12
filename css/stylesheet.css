@@ -104,7 +104,6 @@ main{
 }
 .categorias{
     padding: 1em 0;
-    height:120px;
     background-color: var(--texto-color-primario);
     justify-content: center;
 
@@ -116,6 +115,9 @@ main{
 }
 
 .item-categoria{
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 150px;
     padding: .5em;
     min-width: 80px;
     display: flex;
@@ -125,11 +127,16 @@ main{
     font-size: 1.5em;
     color:rgb(158, 157, 157);
     transition: all 0.3s ease-in;
+    display: grid;
+    place-items: center;
 }
+
+.item-categoria .fa{font-size:2em}
+
 .item-categoria:hover{
     background-color: var(--color-clarito-primario);
     color: white;
-    transform: scale(1.1) translateY(-.3em);
+    transform: scale(1.05) translateY(-.3em);
     cursor: pointer;
     border-radius: 3em;
 
