@@ -1,10 +1,10 @@
-/* ================= VARIABLES GLOBALES Y RESET ================= */
+
 :root {
     --color-primario: #857b2f;
     --color-clarito-primario: #c9c17a;
     --color-secundario: #C1E58E;
     
-    /* Nuevos colores de la interfaz UI (Menta y tonos neutros) */
+    
     --color-accent: #00E5A3; 
     --color-accent-dark: #00c48c;
     --text-primary: #2d2d2d;
@@ -47,9 +47,9 @@ body {
     position: relative;
 }
 
-/* ================= ESTILOS DE TU PRIMERA PANTALLA (Buscador y Categorías) ================= */
+
 .blanco {
-    background-color: var(--texto-color-primario) !important;
+    background-color: var(--texto-color-primario);
 }
 
 header.home-header {
@@ -164,7 +164,7 @@ main.home-main {
     border-radius: 3em;
 }
 
-/* ================= COMPONENTES COMUNES NUEVOS (Navegación por Pestañas) ================= */
+
 .tabs-nav {
     height: 60px;
     display: flex;
@@ -200,7 +200,6 @@ main.home-main {
     background-color: var(--color-accent);
 }
 
-/* ================= PANTALLA 1: DETALLE RESTAURANTE ================= */
 .restaurant-hero {
     height: 220px;
     background-size: cover;
@@ -295,7 +294,7 @@ main.home-main {
     line-height: 1.6;
 }
 
-/* ================= PANTALLA 2: DETALLE DEL PLATO ================= */
+
 .dish-hero {
     height: 250px;
     background-size: cover;
@@ -401,7 +400,7 @@ main.home-main {
     background-color: var(--color-accent-dark);
 }
 
-/* ================= PANTALLA 3: MENÚ (VISTA LISTA) ================= */
+
 .menu-header {
     height: 60px;
     display: flex;
