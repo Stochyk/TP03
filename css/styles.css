@@ -1,0 +1,492 @@
+/* ================= VARIABLES GLOBALES Y RESET ================= */
+:root {
+    --color-primario: #857b2f;
+    --color-clarito-primario: #c9c17a;
+    --color-secundario: #C1E58E;
+    
+    /* Nuevos colores de la interfaz UI (Menta y tonos neutros) */
+    --color-accent: #00E5A3; 
+    --color-accent-dark: #00c48c;
+    --text-primary: #2d2d2d;
+    --text-muted: #9e9e9e;
+    --bg-light: #f9fbfd;
+    --altura-header: 240px;
+    --texto-color-primario: #fff;
+    --texto-color-secundario: #222;
+    
+    --fuente-titulos: 'Lucida Sans', 'Lucida Sans general', 'Lucida Grande', 'Lucida Sans Unicode', sans-serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    background-color: #f4f7f9;
+    color: var(--text-primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* ================= CONTENEDOR PRINCIPAL (ESTILO CELULAR) ================= */
+.screen-container, .container {
+    width: 360px;
+    height: 640px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+/* ================= ESTILOS DE TU PRIMERA PANTALLA (Buscador y Categorías) ================= */
+.blanco {
+    background-color: var(--texto-color-primario) !important;
+}
+
+header.home-header {
+    height: var(--altura-header);
+    background-color: var(--color-primario);
+    color: var(--texto-color-primario);
+    position: relative;
+}
+
+.degradado {
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(135deg, var(--color-primario), var(--color-secundario));
+}
+
+.bienvenida {
+    left: 10%;
+    bottom: 35px;
+    position: absolute;
+    padding: 1.5em 0;
+    font-family: var(--fuente-titulos);
+    color: var(--texto-color-primario);
+}
+
+.buscador {
+    position: absolute;
+    bottom: -25px;
+    left: 10%;
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+    width: 80%;
+    background-color: white;
+    box-shadow: 0 6px 16px -3px rgba(0,0,0,0.5);
+}
+
+.buscador input[type="text"] {
+    width: 100%;
+    border: none;
+    outline: none;
+    padding-left: 1em;
+}
+
+.cuadrado-boton {
+    height: 50px;
+    width: 50px;
+    background-color: green;
+}
+
+.centrar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-buscar {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    height: 50px;
+    width: 50px;
+}
+
+.btn-buscar:hover {
+    background-color: var(--color-secundario);
+    cursor: pointer;
+}
+
+main.home-main {
+    padding-top: 3em;
+    flex-grow: 1;
+    color: var(--texto-color-secundario);
+    overflow-y: auto;
+}
+
+.categorias {
+    padding: 2em 0;
+    background-color: var(--texto-color-primario);
+    justify-content: center;
+    display: flex;
+    gap: 2em;
+    align-items: center;
+    overflow-x: auto;
+}
+
+.item-categoria {
+    flex: 0 0 120px;
+    height: 120px;
+    padding: .5em;
+    min-width: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5em;
+    font-size: 1.5em;
+    color: var(--color-primario);
+    transition: all 0.3s ease-in;
+    display: grid;
+    place-items: center;
+}
+
+.item-categoria .fa {
+    font-size: 2em;
+}
+
+.item-categoria:hover {
+    background-color: #fff;
+    color: var(--color-clarito-primario);
+    box-shadow: 0 6px 26px -3px rgba(0,0,0,0.5);
+    transform: scale(1.05) translateY(-.3em);
+    cursor: pointer;
+    border-radius: 3em;
+}
+
+/* ================= COMPONENTES COMUNES NUEVOS (Navegación por Pestañas) ================= */
+.tabs-nav {
+    height: 60px;
+    display: flex;
+    border-top: 1px solid #f0f3f5;
+    background-color: #ffffff;
+    margin-top: auto; 
+}
+
+.tab-link {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8em;
+    font-weight: bold;
+    color: var(--text-muted);
+    letter-spacing: 0.8px;
+    position: relative;
+    transition: color 0.2s ease;
+}
+
+.tab-link.active {
+    color: #1a1a1a;
+}
+
+.tab-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 20%;
+    width: 60%;
+    height: 3px;
+    background-color: var(--color-accent);
+}
+
+/* ================= PANTALLA 1: DETALLE RESTAURANTE ================= */
+.restaurant-hero {
+    height: 220px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.rating-badge {
+    position: absolute;
+    bottom: -18px;
+    right: 20px;
+    background-color: var(--color-accent);
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 1.1em;
+    padding: 10px 18px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 229, 163, 0.3);
+    z-index: 5;
+}
+
+.restaurant-info {
+    padding: 25px 20px;
+    flex-grow: 1;
+    overflow-y: auto;
+}
+
+.info-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.restaurant-title {
+    font-size: 1.35em;
+    font-weight: 600;
+    color: #1a1a1a;
+}
+
+.price-indicator {
+    color: var(--color-accent);
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.gray-text {
+    color: #d1d1d1;
+}
+
+.restaurant-tags {
+    font-size: 0.85em;
+    color: var(--text-muted);
+    margin-top: 4px;
+    margin-bottom: 25px;
+}
+
+.features-grid {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+
+.feature-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    flex: 1;
+}
+
+.feature-item i {
+    font-size: 1.4em;
+    padding: 10px;
+    border-radius: 50%;
+    background-color: #fffaf5;
+}
+
+.icon-orange { color: #f5a623; }
+.icon-pink { color: #ff8a8a; }
+.icon-purple { color: #b48eff; }
+
+.feature-item span {
+    font-size: 0.7em;
+    font-weight: bold;
+    color: var(--text-muted);
+    letter-spacing: 0.5px;
+}
+
+.description-text {
+    font-size: 0.85em;
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+/* ================= PANTALLA 2: DETALLE DEL PLATO ================= */
+.dish-hero {
+    height: 250px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.price-badge {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--color-accent);
+    color: #fff;
+    font-weight: bold;
+    padding: 10px 18px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 229, 163, 0.3);
+}
+
+.dish-info {
+    padding: 30px 20px 15px 20px;
+    flex-grow: 1;
+}
+
+.dish-title {
+    font-size: 1.25em;
+    line-height: 1.3;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 15px;
+}
+
+.notes-container {
+    margin-top: 25px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.notes-input {
+    width: 100%;
+    padding: 10px 0;
+    border: none;
+    outline: none;
+    font-size: 0.85em;
+    color: var(--text-primary);
+}
+
+.notes-input::placeholder {
+    color: var(--text-muted);
+}
+
+.cart-action-bar {
+    height: 70px;
+    display: flex;
+    margin-top: auto;
+}
+
+.quantity-selector {
+    width: 35%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: var(--color-accent);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+.btn-qty {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.3em;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.2s;
+}
+
+.btn-qty:hover {
+    background-color: var(--color-accent-dark);
+}
+
+.qty-value {
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.btn-add-to-cart {
+    width: 65%;
+    background-color: var(--color-accent);
+    color: white;
+    border: none;
+    font-size: 0.9em;
+    font-weight: bold;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-add-to-cart:hover {
+    background-color: var(--color-accent-dark);
+}
+
+/* ================= PANTALLA 3: MENÚ (VISTA LISTA) ================= */
+.menu-header {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15px;
+    border-bottom: 1px solid #f0f3f5;
+}
+
+.btn-close {
+    background: none;
+    border: none;
+    font-size: 1.2em;
+    color: var(--text-muted);
+    cursor: pointer;
+}
+
+.restaurant-title-header {
+    font-size: 1.1em;
+    font-weight: 600;
+    color: #1a1a1a;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 0.8em;
+    letter-spacing: 1.5px;
+    color: var(--text-muted);
+    margin: 20px 0;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: var(--color-accent);
+    margin: 6px auto 0 auto;
+}
+
+.menu-list {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding: 0 20px;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.item-img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+}
+
+.price-tag {
+    position: absolute;
+    bottom: -3px;
+    right: -10px;
+    background-color: var(--color-accent);
+    color: #fff;
+    font-size: 0.65em;
+    font-weight: bold;
+    padding: 4px 8px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 229, 163, 0.3);
+}
+
+.item-details h4 {
+    font-size: 0.95em;
+    font-weight: 600;
+    color: #333;
+}
+
+.item-details p {
+    font-size: 0.8em;
+    color: var(--text-muted);
+    margin-top: 2px;
+}
