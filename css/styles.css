@@ -34,18 +34,8 @@ body {
     padding: 20px;
 }
 
-/* ================= CONTENEDOR PRINCIPAL (ESTILO CELULAR) ================= */
-.screen-container, .container {
-    width: 360px;
-    height: 640px;
-    background-color: #ffffff;
-    border-radius: 12px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-}
+
+
 
 
 .blanco {
