@@ -245,11 +245,11 @@ main.home-main {
     font-size: 1.1em;
 }
 
-.gray-text {
+.texto-gris {
     color: #d1d1d1;
 }
 
-.restaurant-tags {
+.restaurant-etiquetas {
     font-size: 0.85em;
     color: var(--text-muted);
     margin-top: 4px;
@@ -314,12 +314,12 @@ main.home-main {
     box-shadow: 0 4px 10px rgba(0, 229, 163, 0.3);
 }
 
-.dish-info {
+.plato-info {
     padding: 30px 20px 15px 20px;
     flex-grow: 1;
 }
 
-.dish-title {
+.plato-titulo {
     font-size: 1.25em;
     line-height: 1.3;
     font-weight: 600;
@@ -351,7 +351,7 @@ main.home-main {
     margin-top: auto;
 }
 
-.quantity-selector {
+.cantidad-selector {
     width: 35%;
     display: flex;
     align-items: center;
@@ -361,7 +361,7 @@ main.home-main {
     color: white;
 }
 
-.btn-qty {
+.btn-cntd {
     background: none;
     border: none;
     color: white;
@@ -375,16 +375,16 @@ main.home-main {
     transition: background-color 0.2s;
 }
 
-.btn-qty:hover {
+.btn-cntd:hover {
     background-color: var(--color-accent-dark);
 }
 
-.qty-value {
+.cntd-value {
     font-weight: bold;
     font-size: 1.1em;
 }
 
-.btn-add-to-cart {
+.btn-add {
     width: 65%;
     background-color: var(--color-accent);
     color: white;
@@ -396,7 +396,7 @@ main.home-main {
     transition: background-color 0.2s;
 }
 
-.btn-add-to-cart:hover {
+.btn-add:hover {
     background-color: var(--color-accent-dark);
 }
 
@@ -442,7 +442,7 @@ main.home-main {
     margin: 6px auto 0 auto;
 }
 
-.menu-list {
+.menu-lista {
     flex-grow: 1;
     overflow-y: auto;
     padding: 0 20px;
@@ -478,13 +478,13 @@ main.home-main {
     box-shadow: 0 2px 5px rgba(0, 229, 163, 0.3);
 }
 
-.item-details h4 {
+.item-desc h4 {
     font-size: 0.95em;
     font-weight: 600;
     color: #333;
 }
 
-.item-details p {
+.item-desc p {
     font-size: 0.8em;
     color: var(--text-muted);
     margin-top: 2px;
